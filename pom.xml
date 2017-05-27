@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.fcrepo</groupId>
+    <artifactId>fcrepo-parent</artifactId>
+    <version>4.4.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>fcrepo-audit-ontology</artifactId>
+  <name>Fedora Performance Test Ontology</name>
+  <description>An ontology to model performance tests for use with the Fedora repository framework</description>
+  <packaging>pom</packaging>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>xml-maven-plugin</artifactId>
+          <executions>
+            <execution>
+              <goals>
+                <goal>transform</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+           <transformationSets>
+             <transformationSet>
+               <dir>.</dir>
+               <includes>
+                 <include>performance.owl</include>
+               </includes>
+               <stylesheet>performance.xsl</stylesheet>
+               <outputDir>${project.build.directory}/html</outputDir>
+               <fileMappers>
+                 <fileMapper implementation="org.codehaus.plexus.components.io.filemappers.RegExpFileMapper">
+                   <pattern>\.owl$</pattern>
+                   <replacement>/index.html</replacement>
+                 </fileMapper>
+               </fileMappers>
+             </transformationSet>
+             </transformationSets>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <repositories>
+    <repository>
+      <id>snapshots-repo</id>
+      <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+</project>

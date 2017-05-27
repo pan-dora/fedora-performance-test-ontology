@@ -1,0 +1,608 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://fedora.info/definitions/v4/performance#"
+     xml:base="http://fedora.info/definitions/v4/performance"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://fedora.info/definitions/v4/performance#">
+        <rdfs:label xml:lang="en">Fedora Commons Repository - Performance Test Ontology</rdfs:label>
+        <owl:versionInfo>v4/2017/05/27</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+    <owl:AnnotationProperty rdf:about="&skos;broader"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="&skos;definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+    <owl:AnnotationProperty rdf:about="&skos;inScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrower -->
+
+    <owl:AnnotationProperty rdf:about="&skos;narrower"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="&skos;prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#canMonitor -->
+
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/performance#canMonitor">
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/performance#Metric"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/performance#Tool"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#dependsOn -->
+
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/performance#dependsOn">
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/performance#Activity"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/performance#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#executesActivity -->
+
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/performance#executesActivity">
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/performance#Activity"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/performance#Tester"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#generatesArtifact -->
+
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/performance#generatesArtifact">
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/performance#Activity"/>
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/performance#Artifact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#hasActivity -->
+
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/performance#hasActivity">
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/performance#Activity"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/performance#Test"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#hasGoal -->
+
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/performance#hasGoal">
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/performance#Goal"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/performance#Test"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#imposesActivity -->
+
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/performance#imposesActivity">
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/performance#Activity"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/performance#Goal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#monitors -->
+
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/performance#monitors">
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/performance#Metric"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/performance#Test"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#supports -->
+
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/performance#supports">
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/performance#Activity"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/performance#Tool"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#usesTool -->
+
+    <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/performance#usesTool">
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/performance#Test"/>
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/performance#Tool"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#Activity -->
+
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/performance#Activity">
+        <skos:definition xml:lang="en">A Fedora Repository Performance Test Activity</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#Artifact -->
+
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/performance#Artifact">
+        <skos:definition xml:lang="en">A Fedora Repository Performance Test Artifact</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#Goal -->
+
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/performance#Goal">
+        <skos:definition xml:lang="en">A Fedora Repository Performance Test Goal</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#Metric -->
+
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/performance#Metric">
+        <skos:definition xml:lang="en">A Fedora Repository Performance Metric</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#SystemUnderTest -->
+
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/performance#SystemUnderTest">
+        <skos:definition xml:lang="en">A Fedora Repository Performance Test System Under Test</skos:definition>
+        <rdfs:seeAlso rdf:resource="http://fedora.info/definitions/v4/systemUnderTest#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#Test -->
+
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/performance#Test">
+        <skos:definition xml:lang="en">A Fedora Repository Performance Test</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#Tester -->
+
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/performance#Tester">
+        <skos:definition xml:lang="en">A Fedora Repository Performance Test Tester</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#Tool -->
+
+    <owl:Class rdf:about="http://fedora.info/definitions/v4/performance#Tool">
+        <skos:definition xml:lang="en">A Fedora Repository Performance Test Tool</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="&skos;Concept"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#Activity -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#Activity">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Activity"/>
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <generatesArtifact rdf:resource="http://fedora.info/definitions/v4/performance#Artifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#Artifact">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Artifact"/>
+        <rdf:type rdf:resource="&skos;Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#ClientCount -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#ClientCount">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Metric"/>
+        <skos:definition xml:lang="en">Number of Clients eg. 1, 2, 4, 8</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#ContainerCount -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#ContainerCount">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Test"/>
+        <skos:definition xml:lang="en">Create containers with POST requests at the top of the repository.
+After every &lt;a href=&quot;#MeasurementInterval&quot;&gt;performance:MeasurementInterval&lt;/a&gt;, performance requests should be made</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#ContainerCountRDF -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#ContainerCountRDF">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Test"/>
+        <skos:definition xml:lang="en">Create containers with POST requests with RDF bodies at the top of the repository.
+After every &lt;a href=&quot;#MeasurementInterval&quot;&gt;performance:MeasurementInterval&lt;/a&gt;, performance requests should be made</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#FilesCount -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#FilesCount">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Test"/>
+        <skos:definition xml:lang="en">Load different files with POST requests at the top of the repository ranging between 10KB and 100KB.
+After every &lt;a href=&quot;#MeasurementInterval&quot;&gt;performance:MeasurementInterval&lt;/a&gt;, performance requests should be made</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#FilesLargeSizeCount -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#FilesLargeSizeCount">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Test"/>
+        <skos:definition xml:lang="en">Load different &quot;large&quot; files with POST requests at the top of the repository ranging between 10KB and 10GB.
+After every &lt;a href=&quot;#MeasurementInterval&quot;&gt;performance:MeasurementInterval&lt;/a&gt;, performance requests should be made</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#FilesSmallSizeCount -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#FilesSmallSizeCount">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Test"/>
+        <skos:definition xml:lang="en">Load different &quot;small&quot; files with POST requests at the top of the repository all below the default 4096 Byte threshold.
+After every &lt;a href=&quot;#MeasurementInterval&quot;&gt;performance:MeasurementInterval&lt;/a&gt;, performance requests should be made</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#Goal -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#Goal">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Goal"/>
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <imposesActivity rdf:resource="http://fedora.info/definitions/v4/performance#Activity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#JavaGarbageCollectionLog -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#JavaGarbageCollectionLog">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Artifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#Jmeter -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#Jmeter">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Tool"/>
+        <skos:definition xml:lang="en">a 100% pure Java application designed to load test functional behavior and measure performance</skos:definition>
+        <rdfs:seeAlso rdf:resource="http://jmeter.apache.org/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#JmeterPerformanceLog -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#JmeterPerformanceLog">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Artifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#JmeterSummaryLog -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#JmeterSummaryLog">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Artifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#LargeDatastreams -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#LargeDatastreams">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#LargeMemberCount -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#LargeMemberCount">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#LargeObjectCount -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#LargeObjectCount">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#MeasurementInterval -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#MeasurementInterval">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Metric"/>
+        <skos:definition xml:lang="en">number of requests at which a performance test measurement is generated.
+Also referred to as a &quot;request block&quot;
+Default: 1000</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#Metric -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#Metric">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Metric"/>
+        <rdf:type rdf:resource="&skos;Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#MixedResourcesCount -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#MixedResourcesCount">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Test"/>
+        <skos:definition xml:lang="en">Create a mix of resources representative of a typical LDP model including containers and files.
+After every &lt;a href=&quot;#MeasurementInterval&quot;&gt;performance:MeasurementInterval&lt;/a&gt;, performance requests should be made</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#MultiTBDatasets -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#MultiTBDatasets">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#ResourceCountTotal -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#ResourceCountTotal">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Metric"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#ResponseTimeAverage -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#ResponseTimeAverage">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Metric"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#ResponseTimeDELETE -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#ResponseTimeDELETE">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Metric"/>
+        <skos:definition xml:lang="en">DELETE the resource</skos:definition>
+        <rdfs:seeAlso rdf:resource="http://fedora.info/spec/#http-delete"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#ResponseTimeGET -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#ResponseTimeGET">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Metric"/>
+        <rdfs:seeAlso rdf:resource="http://fedora.info/spec/#httpget"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#ResponseTimeOPTIONS -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#ResponseTimeOPTIONS">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Metric"/>
+        <rdfs:seeAlso rdf:resource="http://fedora.info/spec/#http-options"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#ResponseTimePATCH -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#ResponseTimePATCH">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Metric"/>
+        <rdfs:seeAlso rdf:resource="http://fedora.info/spec/#http-patch"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#ResponseTimePUT -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#ResponseTimePUT">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Metric"/>
+        <rdfs:seeAlso rdf:resource="http://fedora.info/spec/#http-put"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#SystemResourceCPU -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#SystemResourceCPU">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Metric"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#SystemResourceDisk -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#SystemResourceDisk">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Metric"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#SystemResourceGarbageCollection -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#SystemResourceGarbageCollection">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Metric"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#SystemResourceInodeCount -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#SystemResourceInodeCount">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Metric"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#SystemResourceMemory -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#SystemResourceMemory">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Metric"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#SystemUnderTest -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#SystemUnderTest">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#SystemUnderTest"/>
+        <rdf:type rdf:resource="&skos;Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#Test -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#Test">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Test"/>
+        <hasActivity rdf:resource="http://fedora.info/definitions/v4/performance#Activity"/>
+        <hasGoal rdf:resource="http://fedora.info/definitions/v4/performance#Goal"/>
+        <monitors rdf:resource="http://fedora.info/definitions/v4/performance#Metric"/>
+        <usesTool rdf:resource="http://fedora.info/definitions/v4/performance#Tool"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#Tester -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#Tester">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Tester"/>
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <executesActivity rdf:resource="http://fedora.info/definitions/v4/performance#Activity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#TomcatCatalinaOutLog -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#TomcatCatalinaOutLog">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Artifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#TomcatLocalhostAccessLog -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#TomcatLocalhostAccessLog">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Artifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fedora.info/definitions/v4/performance#Tool -->
+
+    <owl:NamedIndividual rdf:about="http://fedora.info/definitions/v4/performance#Tool">
+        <rdf:type rdf:resource="http://fedora.info/definitions/v4/performance#Tool"/>
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <supports rdf:resource="http://fedora.info/definitions/v4/performance#Activity"/>
+        <canMonitor rdf:resource="http://fedora.info/definitions/v4/performance#Metric"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

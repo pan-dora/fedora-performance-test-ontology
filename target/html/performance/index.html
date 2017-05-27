@@ -1,0 +1,1188 @@
+<html xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Fedora Commons Repository - Performance Test Ontology</title>
+<style>
+          body{
+              width: 80%;
+              margin: 0 auto;
+          }
+          header{
+              text-align: center;
+          }
+          h1{
+              font-size: 2em;
+          }
+          h2{
+              font-size: 1.7em;
+          }
+          h3{
+              font-size: 1.4em;
+          }
+          h4{
+              margin-bottom: 0.25em;
+          }
+          body{
+              font-family: sans-serif;
+              background: url(assets/cream_pixels.png);
+          }
+          table{
+              width: 100%;
+              margin: 15px 0;
+              border-collapse: collapse;
+          }
+          tr{
+              border: 1px solid #ccc;
+          }
+          th{
+              background-color: #ddd;
+              padding: 5px;
+              font-size: 120%;
+              text-align: center;
+              font-weight: bold;
+          }
+          td{
+              vertical-align: top;
+              padding: 5px;
+              border: 1px solid #ccc;
+          }
+          td:first-child{
+              width: 150px;
+              font-weight: bold;
+              white-space: nowrap;
+          }
+          tr.about td:nth-child(2){
+              font-size: 120%;
+              font-family: monospace;
+          }</style>
+</head>
+<body>
+<header>
+<img src="assets/fedora_logo.png"><h1>Fedora Commons Repository - Performance Test Ontology</h1>
+<table>
+<tr class="about">
+<td>Namespace</td><td>http://fedora.info/definitions/v4/performance#</td>
+</tr>
+<tr class="version">
+<td>Version</td><td>v4/2017/05/27</td>
+</tr>
+<tr class="version">
+<td>Prior version</td><td><a href=""></a></td>
+</tr>
+</table>
+</header>
+<div class="table-of-contents">
+<h2>Table of Contents</h2>
+<p>
+<a href="#Classes">Classes</a>
+</p>
+<p>
+<a href="#NamedIndividuals">Named Individuals</a>
+</p>
+<p>
+<a href="#ObjectProperties">Object Properties</a>
+</p>
+</div>
+<article>
+<hr>
+<h2>Entity Definitions</h2>
+<a name="Classes"></a>
+<h3>Classes</h3>
+<div id="Activity">
+<table>
+<tr>
+<th colspan="2">performance:Activity</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#Activity</td>
+</tr>
+<tr class="comment">
+<td>Description</td><td>A Fedora Repository Performance Test Activity</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:Class</td>
+</tr>
+<tr class="property">
+<td>Used With</td><td><a href="#dependsOn">performance:dependsOn</a> <a href="#executesActivity">performance:executesActivity</a> <a href="#generatesArtifact">performance:generatesArtifact</a> <a href="#hasActivity">performance:hasActivity</a> <a href="#imposesActivity">performance:imposesActivity</a> <a href="#supports">performance:supports</a> </td>
+</tr>
+<tr class="property">
+<td>Instances</td><td><a href="#Activity">performance:Activity</a> </td>
+</tr>
+</table>
+</div>
+<div id="Artifact">
+<table>
+<tr>
+<th colspan="2">performance:Artifact</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#Artifact</td>
+</tr>
+<tr class="comment">
+<td>Description</td><td>A Fedora Repository Performance Test Artifact</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:Class</td>
+</tr>
+<tr class="property">
+<td>Used With</td><td><a href="#generatesArtifact">performance:generatesArtifact</a> </td>
+</tr>
+<tr class="property">
+<td>Instances</td><td><a href="#Artifact">performance:Artifact</a> <a href="#JavaGarbageCollectionLog">performance:JavaGarbageCollectionLog</a> <a href="#JmeterPerformanceLog">performance:JmeterPerformanceLog</a> <a href="#JmeterSummaryLog">performance:JmeterSummaryLog</a> <a href="#TomcatCatalinaOutLog">performance:TomcatCatalinaOutLog</a> <a href="#TomcatLocalhostAccessLog">performance:TomcatLocalhostAccessLog</a> </td>
+</tr>
+</table>
+</div>
+<div id="Goal">
+<table>
+<tr>
+<th colspan="2">performance:Goal</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#Goal</td>
+</tr>
+<tr class="comment">
+<td>Description</td><td>A Fedora Repository Performance Test Goal</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:Class</td>
+</tr>
+<tr class="property">
+<td>Used With</td><td><a href="#hasGoal">performance:hasGoal</a> <a href="#imposesActivity">performance:imposesActivity</a> </td>
+</tr>
+<tr class="property">
+<td>Instances</td><td><a href="#Goal">performance:Goal</a> <a href="#LargeDatastreams">performance:LargeDatastreams</a> <a href="#LargeMemberCount">performance:LargeMemberCount</a> <a href="#LargeObjectCount">performance:LargeObjectCount</a> <a href="#MultiTBDatasets">performance:MultiTBDatasets</a> </td>
+</tr>
+</table>
+</div>
+<div id="Metric">
+<table>
+<tr>
+<th colspan="2">performance:Metric</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#Metric</td>
+</tr>
+<tr class="comment">
+<td>Description</td><td>A Fedora Repository Performance Metric</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:Class</td>
+</tr>
+<tr class="property">
+<td>Used With</td><td><a href="#canMonitor">performance:canMonitor</a> <a href="#monitors">performance:monitors</a> </td>
+</tr>
+<tr class="property">
+<td>Instances</td><td><a href="#ClientCount">performance:ClientCount</a> <a href="#MeasurementInterval">performance:MeasurementInterval</a> <a href="#Metric">performance:Metric</a> <a href="#ResourceCountTotal">performance:ResourceCountTotal</a> <a href="#ResponseTimeAverage">performance:ResponseTimeAverage</a> <a href="#ResponseTimeDELETE">performance:ResponseTimeDELETE</a> <a href="#ResponseTimeGET">performance:ResponseTimeGET</a> <a href="#ResponseTimeOPTIONS">performance:ResponseTimeOPTIONS</a> <a href="#ResponseTimePATCH">performance:ResponseTimePATCH</a> <a href="#ResponseTimePUT">performance:ResponseTimePUT</a> <a href="#SystemResourceCPU">performance:SystemResourceCPU</a> <a href="#SystemResourceDisk">performance:SystemResourceDisk</a> <a href="#SystemResourceGarbageCollection">performance:SystemResourceGarbageCollection</a> <a href="#SystemResourceInodeCount">performance:SystemResourceInodeCount</a> <a href="#SystemResourceMemory">performance:SystemResourceMemory</a> </td>
+</tr>
+</table>
+</div>
+<div id="SystemUnderTest">
+<table>
+<tr>
+<th colspan="2">performance:SystemUnderTest</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#SystemUnderTest</td>
+</tr>
+<tr class="comment">
+<td>Description</td><td>A Fedora Repository Performance Test System Under Test</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:Class</td>
+</tr>
+<tr class="property">
+<td>Instances</td><td><a href="#SystemUnderTest">performance:SystemUnderTest</a> </td>
+</tr>
+<tr class="property">
+<td>rdfs:seeAlso</td><td><a href="http://fedora.info/definitions/v4/systemUnderTest#">http://fedora.info/definitions/v4/systemUnderTest#</a> </td>
+</tr>
+</table>
+</div>
+<div id="Test">
+<table>
+<tr>
+<th colspan="2">performance:Test</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#Test</td>
+</tr>
+<tr class="comment">
+<td>Description</td><td>A Fedora Repository Performance Test</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:Class</td>
+</tr>
+<tr class="property">
+<td>Used With</td><td><a href="#executesActivity">performance:executesActivity</a> <a href="#hasActivity">performance:hasActivity</a> <a href="#hasGoal">performance:hasGoal</a> <a href="#monitors">performance:monitors</a> <a href="#usesTool">performance:usesTool</a> </td>
+</tr>
+<tr class="property">
+<td>Instances</td><td><a href="#ContainerCount">performance:ContainerCount</a> <a href="#ContainerCountRDF">performance:ContainerCountRDF</a> <a href="#FilesCount">performance:FilesCount</a> <a href="#FilesLargeSizeCount">performance:FilesLargeSizeCount</a> <a href="#FilesSmallSizeCount">performance:FilesSmallSizeCount</a> <a href="#MixedResourcesCount">performance:MixedResourcesCount</a> <a href="#Test">performance:Test</a> </td>
+</tr>
+</table>
+</div>
+<div id="Tester">
+<table>
+<tr>
+<th colspan="2">performance:Tester</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#Tester</td>
+</tr>
+<tr class="comment">
+<td>Description</td><td>A Fedora Repository Performance Test Tester</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:Class</td>
+</tr>
+<tr class="property">
+<td>Used With</td><td><a href="#executesActivity">performance:executesActivity</a> </td>
+</tr>
+<tr class="property">
+<td>Instances</td><td><a href="#Tester">performance:Tester</a> </td>
+</tr>
+</table>
+</div>
+<div id="Tool">
+<table>
+<tr>
+<th colspan="2">performance:Tool</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#Tool</td>
+</tr>
+<tr class="comment">
+<td>Description</td><td>A Fedora Repository Performance Test Tool</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:Class</td>
+</tr>
+<tr class="property">
+<td>Used With</td><td><a href="#canMonitor">performance:canMonitor</a> <a href="#supports">performance:supports</a> <a href="#usesTool">performance:usesTool</a> </td>
+</tr>
+<tr class="property">
+<td>Instances</td><td><a href="#Jmeter">performance:Jmeter</a> <a href="#Tool">performance:Tool</a> </td>
+</tr>
+</table>
+</div>
+<div id="">
+<table>
+<tr>
+<th colspan="2">performance:</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://www.w3.org/2004/02/skos/core#Concept</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:Class</td>
+</tr>
+<tr class="property">
+<td>Used With</td><td><a href=""></a> <a href=""></a> <a href=""></a> <a href="#Metric">performance:Metric</a> <a href="#Tool">performance:Tool</a> <a href="#Activity">performance:Activity</a> <a href="#Activity">performance:Activity</a> <a href="#Activity">performance:Activity</a> <a href="#Tester">performance:Tester</a> <a href="#Activity">performance:Activity</a> <a href="#Artifact">performance:Artifact</a> <a href="#Activity">performance:Activity</a> <a href="#Test">performance:Test</a> <a href="#Goal">performance:Goal</a> <a href="#Test">performance:Test</a> <a href="#Activity">performance:Activity</a> <a href="#Goal">performance:Goal</a> <a href="#Metric">performance:Metric</a> <a href="#Test">performance:Test</a> <a href="#Activity">performance:Activity</a> <a href="#Tool">performance:Tool</a> <a href="#Test">performance:Test</a> <a href="#Tool">performance:Tool</a> <a href=""></a> <a href=""></a> <a href=""></a> <a href=""></a> <a href=""></a> <a href="http://fedora.info/definitions/v4/systemUnderTest#">http://fedora.info/definitions/v4/systemUnderTest#</a> <a href=""></a> <a href=""></a> <a href=""></a> <a href="#Activity">performance:Activity</a> <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a> <a href="#Artifact">performance:Artifact</a> <a href="#Artifact">performance:Artifact</a> <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a> <a href="#Metric">performance:Metric</a> <a href=""></a> <a href="#Test">performance:Test</a> <a href=""></a> <a href="#Test">performance:Test</a> <a href=""></a> <a href="#Test">performance:Test</a> <a href=""></a> <a href="#Test">performance:Test</a> <a href=""></a> <a href="#Test">performance:Test</a> <a href=""></a> <a href="#Goal">performance:Goal</a> <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a> <a href="#Activity">performance:Activity</a> <a href="#Artifact">performance:Artifact</a> <a href="#Tool">performance:Tool</a> <a href=""></a> <a href="http://jmeter.apache.org/">http://jmeter.apache.org/</a> <a href="#Artifact">performance:Artifact</a> <a href="#Artifact">performance:Artifact</a> <a href="#Goal">performance:Goal</a> <a href="#Goal">performance:Goal</a> <a href="#Goal">performance:Goal</a> <a href="#Metric">performance:Metric</a> <a href=""></a> <a href="#Metric">performance:Metric</a> <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a> <a href="#Test">performance:Test</a> <a href=""></a> <a href="#Goal">performance:Goal</a> <a href="#Metric">performance:Metric</a> <a href="#Metric">performance:Metric</a> <a href="#Metric">performance:Metric</a> <a href=""></a> <a href="http://fedora.info/spec/#http-delete">http://fedora.info/spec/#http-delete</a> <a href="#Metric">performance:Metric</a> <a href="http://fedora.info/spec/#httpget">http://fedora.info/spec/#httpget</a> <a href="#Metric">performance:Metric</a> <a href="http://fedora.info/spec/#http-options">http://fedora.info/spec/#http-options</a> <a href="#Metric">performance:Metric</a> <a href="http://fedora.info/spec/#http-patch">http://fedora.info/spec/#http-patch</a> <a href="#Metric">performance:Metric</a> <a href="http://fedora.info/spec/#http-put">http://fedora.info/spec/#http-put</a> <a href="#Metric">performance:Metric</a> <a href="#Metric">performance:Metric</a> <a href="#Metric">performance:Metric</a> <a href="#Metric">performance:Metric</a> <a href="#Metric">performance:Metric</a> <a href="#SystemUnderTest">performance:SystemUnderTest</a> <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a> <a href="#Test">performance:Test</a> <a href="#Activity">performance:Activity</a> <a href="#Goal">performance:Goal</a> <a href="#Metric">performance:Metric</a> <a href="#Tool">performance:Tool</a> <a href="#Tester">performance:Tester</a> <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a> <a href="#Activity">performance:Activity</a> <a href="#Artifact">performance:Artifact</a> <a href="#Artifact">performance:Artifact</a> <a href="#Tool">performance:Tool</a> <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a> <a href="#Activity">performance:Activity</a> <a href="#Metric">performance:Metric</a> <a href=""></a> <a href="#Activity">performance:Activity</a> <a href="#Activity">performance:Activity</a> <a href="#Artifact">performance:Artifact</a> <a href="#Artifact">performance:Artifact</a> <a href="#canMonitor">performance:canMonitor</a> <a href="#ClientCount">performance:ClientCount</a> <a href="#ContainerCount">performance:ContainerCount</a> <a href="#ContainerCountRDF">performance:ContainerCountRDF</a> <a href="#dependsOn">performance:dependsOn</a> <a href="#executesActivity">performance:executesActivity</a> <a href="#FilesCount">performance:FilesCount</a> <a href="#FilesLargeSizeCount">performance:FilesLargeSizeCount</a> <a href="#FilesSmallSizeCount">performance:FilesSmallSizeCount</a> <a href="#generatesArtifact">performance:generatesArtifact</a> <a href="#Goal">performance:Goal</a> <a href="#Goal">performance:Goal</a> <a href="#hasActivity">performance:hasActivity</a> <a href="#hasGoal">performance:hasGoal</a> <a href="#imposesActivity">performance:imposesActivity</a> <a href="#JavaGarbageCollectionLog">performance:JavaGarbageCollectionLog</a> <a href="#Jmeter">performance:Jmeter</a> <a href="#JmeterPerformanceLog">performance:JmeterPerformanceLog</a> <a href="#JmeterSummaryLog">performance:JmeterSummaryLog</a> <a href="#LargeDatastreams">performance:LargeDatastreams</a> <a href="#LargeMemberCount">performance:LargeMemberCount</a> <a href="#LargeObjectCount">performance:LargeObjectCount</a> <a href="#MeasurementInterval">performance:MeasurementInterval</a> <a href="#Metric">performance:Metric</a> <a href="#Metric">performance:Metric</a> <a href="#MixedResourcesCount">performance:MixedResourcesCount</a> <a href="#monitors">performance:monitors</a> <a href="#MultiTBDatasets">performance:MultiTBDatasets</a> <a href="#ResourceCountTotal">performance:ResourceCountTotal</a> <a href="#ResponseTimeAverage">performance:ResponseTimeAverage</a> <a href="#ResponseTimeDELETE">performance:ResponseTimeDELETE</a> <a href="#ResponseTimeGET">performance:ResponseTimeGET</a> <a href="#ResponseTimeOPTIONS">performance:ResponseTimeOPTIONS</a> <a href="#ResponseTimePATCH">performance:ResponseTimePATCH</a> <a href="#ResponseTimePUT">performance:ResponseTimePUT</a> <a href="#supports">performance:supports</a> <a href="#SystemResourceCPU">performance:SystemResourceCPU</a> <a href="#SystemResourceDisk">performance:SystemResourceDisk</a> <a href="#SystemResourceGarbageCollection">performance:SystemResourceGarbageCollection</a> <a href="#SystemResourceInodeCount">performance:SystemResourceInodeCount</a> <a href="#SystemResourceMemory">performance:SystemResourceMemory</a> <a href="#SystemUnderTest">performance:SystemUnderTest</a> <a href="#SystemUnderTest">performance:SystemUnderTest</a> <a href="#Test">performance:Test</a> <a href="#Test">performance:Test</a> <a href="#Tester">performance:Tester</a> <a href="#Tester">performance:Tester</a> <a href="#TomcatCatalinaOutLog">performance:TomcatCatalinaOutLog</a> <a href="#TomcatLocalhostAccessLog">performance:TomcatLocalhostAccessLog</a> <a href="#Tool">performance:Tool</a> <a href="#Tool">performance:Tool</a> <a href="#usesTool">performance:usesTool</a> <a href=""></a> <a href=""></a> <a href=""></a> <a href=""></a> <a href=""></a> <a href=""></a> </td>
+</tr>
+</table>
+</div>
+<a name="NamedIndividuals"></a>
+<h3>Named Individuals</h3>
+<div id="Activity">
+<table>
+<tr>
+<th colspan="2">performance:Activity</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#Activity</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>Used With</td><td><a href="#dependsOn">performance:dependsOn</a> <a href="#executesActivity">performance:executesActivity</a> <a href="#generatesArtifact">performance:generatesArtifact</a> <a href="#hasActivity">performance:hasActivity</a> <a href="#imposesActivity">performance:imposesActivity</a> <a href="#supports">performance:supports</a> </td>
+</tr>
+<tr class="property">
+<td>Instances</td><td><a href="#Activity">performance:Activity</a> </td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Activity">performance:Activity</a> <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a> </td>
+</tr>
+</table>
+</div>
+<div id="Artifact">
+<table>
+<tr>
+<th colspan="2">performance:Artifact</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#Artifact</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>Used With</td><td><a href="#generatesArtifact">performance:generatesArtifact</a> </td>
+</tr>
+<tr class="property">
+<td>Instances</td><td><a href="#Artifact">performance:Artifact</a> <a href="#JavaGarbageCollectionLog">performance:JavaGarbageCollectionLog</a> <a href="#JmeterPerformanceLog">performance:JmeterPerformanceLog</a> <a href="#JmeterSummaryLog">performance:JmeterSummaryLog</a> <a href="#TomcatCatalinaOutLog">performance:TomcatCatalinaOutLog</a> <a href="#TomcatLocalhostAccessLog">performance:TomcatLocalhostAccessLog</a> </td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Artifact">performance:Artifact</a> <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a> </td>
+</tr>
+</table>
+</div>
+<div id="ClientCount">
+<table>
+<tr>
+<th colspan="2">performance:ClientCount</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#ClientCount</td>
+</tr>
+<tr class="comment">
+<td>Description</td><td>Number of Clients eg. 1, 2, 4, 8</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Metric">performance:Metric</a> </td>
+</tr>
+</table>
+</div>
+<div id="ContainerCount">
+<table>
+<tr>
+<th colspan="2">performance:ContainerCount</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#ContainerCount</td>
+</tr>
+<tr class="comment">
+<td>Description</td><td>Create containers with POST requests at the top of the repository.
+After every <a href="#MeasurementInterval">performance:MeasurementInterval</a>, performance requests should be made</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Test">performance:Test</a> </td>
+</tr>
+</table>
+</div>
+<div id="ContainerCountRDF">
+<table>
+<tr>
+<th colspan="2">performance:ContainerCountRDF</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#ContainerCountRDF</td>
+</tr>
+<tr class="comment">
+<td>Description</td><td>Create containers with POST requests with RDF bodies at the top of the repository.
+After every <a href="#MeasurementInterval">performance:MeasurementInterval</a>, performance requests should be made</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Test">performance:Test</a> </td>
+</tr>
+</table>
+</div>
+<div id="FilesCount">
+<table>
+<tr>
+<th colspan="2">performance:FilesCount</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#FilesCount</td>
+</tr>
+<tr class="comment">
+<td>Description</td><td>Load different files with POST requests at the top of the repository ranging between 10KB and 100KB.
+After every <a href="#MeasurementInterval">performance:MeasurementInterval</a>, performance requests should be made</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Test">performance:Test</a> </td>
+</tr>
+</table>
+</div>
+<div id="FilesLargeSizeCount">
+<table>
+<tr>
+<th colspan="2">performance:FilesLargeSizeCount</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#FilesLargeSizeCount</td>
+</tr>
+<tr class="comment">
+<td>Description</td><td>Load different "large" files with POST requests at the top of the repository ranging between 10KB and 10GB.
+After every <a href="#MeasurementInterval">performance:MeasurementInterval</a>, performance requests should be made</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Test">performance:Test</a> </td>
+</tr>
+</table>
+</div>
+<div id="FilesSmallSizeCount">
+<table>
+<tr>
+<th colspan="2">performance:FilesSmallSizeCount</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#FilesSmallSizeCount</td>
+</tr>
+<tr class="comment">
+<td>Description</td><td>Load different "small" files with POST requests at the top of the repository all below the default 4096 Byte threshold.
+After every <a href="#MeasurementInterval">performance:MeasurementInterval</a>, performance requests should be made</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Test">performance:Test</a> </td>
+</tr>
+</table>
+</div>
+<div id="Goal">
+<table>
+<tr>
+<th colspan="2">performance:Goal</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#Goal</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>Used With</td><td><a href="#hasGoal">performance:hasGoal</a> <a href="#imposesActivity">performance:imposesActivity</a> </td>
+</tr>
+<tr class="property">
+<td>Instances</td><td><a href="#Goal">performance:Goal</a> <a href="#LargeDatastreams">performance:LargeDatastreams</a> <a href="#LargeMemberCount">performance:LargeMemberCount</a> <a href="#LargeObjectCount">performance:LargeObjectCount</a> <a href="#MultiTBDatasets">performance:MultiTBDatasets</a> </td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Goal">performance:Goal</a> <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a> </td>
+</tr>
+</table>
+</div>
+<div id="JavaGarbageCollectionLog">
+<table>
+<tr>
+<th colspan="2">performance:JavaGarbageCollectionLog</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#JavaGarbageCollectionLog</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Artifact">performance:Artifact</a> </td>
+</tr>
+</table>
+</div>
+<div id="Jmeter">
+<table>
+<tr>
+<th colspan="2">performance:Jmeter</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#Jmeter</td>
+</tr>
+<tr class="comment">
+<td>Description</td><td>a 100% pure Java application designed to load test functional behavior and measure performance</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Tool">performance:Tool</a> </td>
+</tr>
+<tr class="property">
+<td>rdfs:seeAlso</td><td><a href="http://jmeter.apache.org/">http://jmeter.apache.org/</a> </td>
+</tr>
+</table>
+</div>
+<div id="JmeterPerformanceLog">
+<table>
+<tr>
+<th colspan="2">performance:JmeterPerformanceLog</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#JmeterPerformanceLog</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Artifact">performance:Artifact</a> </td>
+</tr>
+</table>
+</div>
+<div id="JmeterSummaryLog">
+<table>
+<tr>
+<th colspan="2">performance:JmeterSummaryLog</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#JmeterSummaryLog</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Artifact">performance:Artifact</a> </td>
+</tr>
+</table>
+</div>
+<div id="LargeDatastreams">
+<table>
+<tr>
+<th colspan="2">performance:LargeDatastreams</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#LargeDatastreams</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Goal">performance:Goal</a> </td>
+</tr>
+</table>
+</div>
+<div id="LargeMemberCount">
+<table>
+<tr>
+<th colspan="2">performance:LargeMemberCount</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#LargeMemberCount</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Goal">performance:Goal</a> </td>
+</tr>
+</table>
+</div>
+<div id="LargeObjectCount">
+<table>
+<tr>
+<th colspan="2">performance:LargeObjectCount</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#LargeObjectCount</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Goal">performance:Goal</a> </td>
+</tr>
+</table>
+</div>
+<div id="MeasurementInterval">
+<table>
+<tr>
+<th colspan="2">performance:MeasurementInterval</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#MeasurementInterval</td>
+</tr>
+<tr class="comment">
+<td>Description</td><td>number of requests at which a performance test measurement is generated.
+Also referred to as a "request block"
+Default: 1000</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Metric">performance:Metric</a> </td>
+</tr>
+</table>
+</div>
+<div id="Metric">
+<table>
+<tr>
+<th colspan="2">performance:Metric</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#Metric</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>Used With</td><td><a href="#canMonitor">performance:canMonitor</a> <a href="#monitors">performance:monitors</a> </td>
+</tr>
+<tr class="property">
+<td>Instances</td><td><a href="#ClientCount">performance:ClientCount</a> <a href="#MeasurementInterval">performance:MeasurementInterval</a> <a href="#Metric">performance:Metric</a> <a href="#ResourceCountTotal">performance:ResourceCountTotal</a> <a href="#ResponseTimeAverage">performance:ResponseTimeAverage</a> <a href="#ResponseTimeDELETE">performance:ResponseTimeDELETE</a> <a href="#ResponseTimeGET">performance:ResponseTimeGET</a> <a href="#ResponseTimeOPTIONS">performance:ResponseTimeOPTIONS</a> <a href="#ResponseTimePATCH">performance:ResponseTimePATCH</a> <a href="#ResponseTimePUT">performance:ResponseTimePUT</a> <a href="#SystemResourceCPU">performance:SystemResourceCPU</a> <a href="#SystemResourceDisk">performance:SystemResourceDisk</a> <a href="#SystemResourceGarbageCollection">performance:SystemResourceGarbageCollection</a> <a href="#SystemResourceInodeCount">performance:SystemResourceInodeCount</a> <a href="#SystemResourceMemory">performance:SystemResourceMemory</a> </td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Metric">performance:Metric</a> <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a> </td>
+</tr>
+</table>
+</div>
+<div id="MixedResourcesCount">
+<table>
+<tr>
+<th colspan="2">performance:MixedResourcesCount</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#MixedResourcesCount</td>
+</tr>
+<tr class="comment">
+<td>Description</td><td>Create a mix of resources representative of a typical LDP model including containers and files.
+After every <a href="#MeasurementInterval">performance:MeasurementInterval</a>, performance requests should be made</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Test">performance:Test</a> </td>
+</tr>
+</table>
+</div>
+<div id="MultiTBDatasets">
+<table>
+<tr>
+<th colspan="2">performance:MultiTBDatasets</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#MultiTBDatasets</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Goal">performance:Goal</a> </td>
+</tr>
+</table>
+</div>
+<div id="ResourceCountTotal">
+<table>
+<tr>
+<th colspan="2">performance:ResourceCountTotal</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#ResourceCountTotal</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Metric">performance:Metric</a> </td>
+</tr>
+</table>
+</div>
+<div id="ResponseTimeAverage">
+<table>
+<tr>
+<th colspan="2">performance:ResponseTimeAverage</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#ResponseTimeAverage</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Metric">performance:Metric</a> </td>
+</tr>
+</table>
+</div>
+<div id="ResponseTimeDELETE">
+<table>
+<tr>
+<th colspan="2">performance:ResponseTimeDELETE</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#ResponseTimeDELETE</td>
+</tr>
+<tr class="comment">
+<td>Description</td><td>DELETE the resource</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Metric">performance:Metric</a> </td>
+</tr>
+<tr class="property">
+<td>rdfs:seeAlso</td><td><a href="http://fedora.info/spec/#http-delete">http://fedora.info/spec/#http-delete</a> </td>
+</tr>
+</table>
+</div>
+<div id="ResponseTimeGET">
+<table>
+<tr>
+<th colspan="2">performance:ResponseTimeGET</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#ResponseTimeGET</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Metric">performance:Metric</a> </td>
+</tr>
+<tr class="property">
+<td>rdfs:seeAlso</td><td><a href="http://fedora.info/spec/#httpget">http://fedora.info/spec/#httpget</a> </td>
+</tr>
+</table>
+</div>
+<div id="ResponseTimeOPTIONS">
+<table>
+<tr>
+<th colspan="2">performance:ResponseTimeOPTIONS</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#ResponseTimeOPTIONS</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Metric">performance:Metric</a> </td>
+</tr>
+<tr class="property">
+<td>rdfs:seeAlso</td><td><a href="http://fedora.info/spec/#http-options">http://fedora.info/spec/#http-options</a> </td>
+</tr>
+</table>
+</div>
+<div id="ResponseTimePATCH">
+<table>
+<tr>
+<th colspan="2">performance:ResponseTimePATCH</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#ResponseTimePATCH</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Metric">performance:Metric</a> </td>
+</tr>
+<tr class="property">
+<td>rdfs:seeAlso</td><td><a href="http://fedora.info/spec/#http-patch">http://fedora.info/spec/#http-patch</a> </td>
+</tr>
+</table>
+</div>
+<div id="ResponseTimePUT">
+<table>
+<tr>
+<th colspan="2">performance:ResponseTimePUT</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#ResponseTimePUT</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Metric">performance:Metric</a> </td>
+</tr>
+<tr class="property">
+<td>rdfs:seeAlso</td><td><a href="http://fedora.info/spec/#http-put">http://fedora.info/spec/#http-put</a> </td>
+</tr>
+</table>
+</div>
+<div id="SystemResourceCPU">
+<table>
+<tr>
+<th colspan="2">performance:SystemResourceCPU</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#SystemResourceCPU</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Metric">performance:Metric</a> </td>
+</tr>
+</table>
+</div>
+<div id="SystemResourceDisk">
+<table>
+<tr>
+<th colspan="2">performance:SystemResourceDisk</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#SystemResourceDisk</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Metric">performance:Metric</a> </td>
+</tr>
+</table>
+</div>
+<div id="SystemResourceGarbageCollection">
+<table>
+<tr>
+<th colspan="2">performance:SystemResourceGarbageCollection</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#SystemResourceGarbageCollection</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Metric">performance:Metric</a> </td>
+</tr>
+</table>
+</div>
+<div id="SystemResourceInodeCount">
+<table>
+<tr>
+<th colspan="2">performance:SystemResourceInodeCount</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#SystemResourceInodeCount</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Metric">performance:Metric</a> </td>
+</tr>
+</table>
+</div>
+<div id="SystemResourceMemory">
+<table>
+<tr>
+<th colspan="2">performance:SystemResourceMemory</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#SystemResourceMemory</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Metric">performance:Metric</a> </td>
+</tr>
+</table>
+</div>
+<div id="SystemUnderTest">
+<table>
+<tr>
+<th colspan="2">performance:SystemUnderTest</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#SystemUnderTest</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>Instances</td><td><a href="#SystemUnderTest">performance:SystemUnderTest</a> </td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#SystemUnderTest">performance:SystemUnderTest</a> <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a> </td>
+</tr>
+</table>
+</div>
+<div id="Test">
+<table>
+<tr>
+<th colspan="2">performance:Test</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#Test</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>Used With</td><td><a href="#executesActivity">performance:executesActivity</a> <a href="#hasActivity">performance:hasActivity</a> <a href="#hasGoal">performance:hasGoal</a> <a href="#monitors">performance:monitors</a> <a href="#usesTool">performance:usesTool</a> </td>
+</tr>
+<tr class="property">
+<td>Instances</td><td><a href="#ContainerCount">performance:ContainerCount</a> <a href="#ContainerCountRDF">performance:ContainerCountRDF</a> <a href="#FilesCount">performance:FilesCount</a> <a href="#FilesLargeSizeCount">performance:FilesLargeSizeCount</a> <a href="#FilesSmallSizeCount">performance:FilesSmallSizeCount</a> <a href="#MixedResourcesCount">performance:MixedResourcesCount</a> <a href="#Test">performance:Test</a> </td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Test">performance:Test</a> </td>
+</tr>
+</table>
+</div>
+<div id="Tester">
+<table>
+<tr>
+<th colspan="2">performance:Tester</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#Tester</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>Used With</td><td><a href="#executesActivity">performance:executesActivity</a> </td>
+</tr>
+<tr class="property">
+<td>Instances</td><td><a href="#Tester">performance:Tester</a> </td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Tester">performance:Tester</a> <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a> </td>
+</tr>
+</table>
+</div>
+<div id="TomcatCatalinaOutLog">
+<table>
+<tr>
+<th colspan="2">performance:TomcatCatalinaOutLog</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#TomcatCatalinaOutLog</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Artifact">performance:Artifact</a> </td>
+</tr>
+</table>
+</div>
+<div id="TomcatLocalhostAccessLog">
+<table>
+<tr>
+<th colspan="2">performance:TomcatLocalhostAccessLog</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#TomcatLocalhostAccessLog</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Artifact">performance:Artifact</a> </td>
+</tr>
+</table>
+</div>
+<div id="Tool">
+<table>
+<tr>
+<th colspan="2">performance:Tool</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#Tool</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:NamedIndividual</td>
+</tr>
+<tr class="property">
+<td>Used With</td><td><a href="#canMonitor">performance:canMonitor</a> <a href="#supports">performance:supports</a> <a href="#usesTool">performance:usesTool</a> </td>
+</tr>
+<tr class="property">
+<td>Instances</td><td><a href="#Jmeter">performance:Jmeter</a> <a href="#Tool">performance:Tool</a> </td>
+</tr>
+<tr class="property">
+<td>rdf:type</td><td><a href="#Tool">performance:Tool</a> <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a> </td>
+</tr>
+</table>
+</div>
+<a name="ObjectProperties"></a>
+<h3>Object Properties</h3>
+<div id="canMonitor">
+<table>
+<tr>
+<th colspan="2">performance:canMonitor</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#canMonitor</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:ObjectProperty</td>
+</tr>
+<tr class="property">
+<td>Domain</td><td><a href="#Tool">performance:Tool</a> </td>
+</tr>
+<tr class="property">
+<td>Range</td><td><a href="#Metric">performance:Metric</a> </td>
+</tr>
+</table>
+</div>
+<div id="dependsOn">
+<table>
+<tr>
+<th colspan="2">performance:dependsOn</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#dependsOn</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:ObjectProperty</td>
+</tr>
+<tr class="property">
+<td>Domain</td><td><a href="#Activity">performance:Activity</a> </td>
+</tr>
+<tr class="property">
+<td>Range</td><td><a href="#Activity">performance:Activity</a> </td>
+</tr>
+</table>
+</div>
+<div id="executesActivity">
+<table>
+<tr>
+<th colspan="2">performance:executesActivity</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#executesActivity</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:ObjectProperty</td>
+</tr>
+<tr class="property">
+<td>Domain</td><td><a href="#Tester">performance:Tester</a> </td>
+</tr>
+<tr class="property">
+<td>Range</td><td><a href="#Activity">performance:Activity</a> </td>
+</tr>
+</table>
+</div>
+<div id="generatesArtifact">
+<table>
+<tr>
+<th colspan="2">performance:generatesArtifact</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#generatesArtifact</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:ObjectProperty</td>
+</tr>
+<tr class="property">
+<td>Domain</td><td><a href="#Activity">performance:Activity</a> </td>
+</tr>
+<tr class="property">
+<td>Range</td><td><a href="#Artifact">performance:Artifact</a> </td>
+</tr>
+</table>
+</div>
+<div id="hasActivity">
+<table>
+<tr>
+<th colspan="2">performance:hasActivity</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#hasActivity</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:ObjectProperty</td>
+</tr>
+<tr class="property">
+<td>Domain</td><td><a href="#Test">performance:Test</a> </td>
+</tr>
+<tr class="property">
+<td>Range</td><td><a href="#Activity">performance:Activity</a> </td>
+</tr>
+</table>
+</div>
+<div id="hasGoal">
+<table>
+<tr>
+<th colspan="2">performance:hasGoal</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#hasGoal</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:ObjectProperty</td>
+</tr>
+<tr class="property">
+<td>Domain</td><td><a href="#Test">performance:Test</a> </td>
+</tr>
+<tr class="property">
+<td>Range</td><td><a href="#Goal">performance:Goal</a> </td>
+</tr>
+</table>
+</div>
+<div id="imposesActivity">
+<table>
+<tr>
+<th colspan="2">performance:imposesActivity</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#imposesActivity</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:ObjectProperty</td>
+</tr>
+<tr class="property">
+<td>Domain</td><td><a href="#Goal">performance:Goal</a> </td>
+</tr>
+<tr class="property">
+<td>Range</td><td><a href="#Activity">performance:Activity</a> </td>
+</tr>
+</table>
+</div>
+<div id="monitors">
+<table>
+<tr>
+<th colspan="2">performance:monitors</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#monitors</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:ObjectProperty</td>
+</tr>
+<tr class="property">
+<td>Domain</td><td><a href="#Test">performance:Test</a> </td>
+</tr>
+<tr class="property">
+<td>Range</td><td><a href="#Metric">performance:Metric</a> </td>
+</tr>
+</table>
+</div>
+<div id="supports">
+<table>
+<tr>
+<th colspan="2">performance:supports</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#supports</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:ObjectProperty</td>
+</tr>
+<tr class="property">
+<td>Domain</td><td><a href="#Tool">performance:Tool</a> </td>
+</tr>
+<tr class="property">
+<td>Range</td><td><a href="#Activity">performance:Activity</a> </td>
+</tr>
+</table>
+</div>
+<div id="usesTool">
+<table>
+<tr>
+<th colspan="2">performance:usesTool</th>
+</tr>
+<tr class="about">
+<td>URI</td><td>http://fedora.info/definitions/v4/performance#usesTool</td>
+</tr>
+<tr class="property">
+<td>Type</td><td>owl:ObjectProperty</td>
+</tr>
+<tr class="property">
+<td>Domain</td><td><a href="#Test">performance:Test</a> </td>
+</tr>
+<tr class="property">
+<td>Range</td><td><a href="#Tool">performance:Tool</a> </td>
+</tr>
+</table>
+</div>
+</article>
+</body>
+</html><!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
